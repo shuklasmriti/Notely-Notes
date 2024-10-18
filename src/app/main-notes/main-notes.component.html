@@ -1,0 +1,51 @@
+<div class="header">
+  <h1 class="heading">Welcome to Notes!</h1>
+</div>
+<div class="sub-headings">
+  <h3>Wanna Add notes??</h3>
+  <h3>Added Notes</h3>
+</div>
+<div class="main-body">
+  <div class="left-body">
+  <h3 class="head-for-small">Wanna Add notes??</h3>
+
+    <button class="add-button" (click)="addInput()">Add</button>
+
+    <div class="input-area" *ngFor="let input of inputs">
+      <input
+        type="text"
+        placeholder="Add your notes here"
+        [(ngModel)]="userInput"
+      />
+      <div class="input-button-box">
+      <button (click)="submit()">Submit</button>
+      <button (click)="removeInput()">Remove</button>
+    </div>
+</div>
+  </div>
+  <div class="right-body">
+  <h3 class="head-for-small">Added Notes</h3>
+
+    <div class="listing-body">
+      <ul>
+        <li *ngFor="let lists of list; let i = index">
+          <div *ngIf="!lists.isEditing">{{ lists.text }}</div>
+          <div *ngIf="lists.isEditing">
+            <input type="text" [(ngModel)]="lists.text" />
+          </div>
+          <div class="list-button-box">
+            <button
+              class="edit-button"
+              (click)="edit(i)"
+              *ngIf="!lists.isEditing"
+            >
+              Edit
+            </button>
+            <button (click)="save(i)" *ngIf="lists.isEditing">Save</button>
+            <button (click)="delete(i)">Delete</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

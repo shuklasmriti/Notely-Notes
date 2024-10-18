@@ -1,0 +1,94 @@
+.header{
+    display: flex;
+    background-color:#4BC5B7;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.sub-headings{
+    margin-top: 10px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+}
+.head-for-small{
+    display: none;
+}
+.main-body{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 30px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-top: 20px;
+}
+.left-body {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* justify-content:center; */
+    /* align-items: center; */
+    gap: 20px;
+    padding: 20px;
+    /* height: 8rem; */
+    /* border: 1px solid black; */
+}
+.right-body{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.input-area{
+    display: flex;
+    gap: 7px;
+}
+input{
+    border: 1px solid #4BC5B7;
+    /* color: black; */
+    font-style: italic;
+}
+
+.add-button , button , .edit-button{
+        background-color: #4BC5B7;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 7px;
+    /* padding: 9px; */
+    color: white;
+    font-size: 500;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+.list-button-box{
+    display: flex;
+    gap: 7px;
+}
+
+ul {
+    list-style-type:disclosure-closed;
+}
+@media (max-width:800px){
+    .sub-headings{
+        display: none;
+    }
+    .main-body{
+        flex-direction: column;
+    }
+.head-for-small{
+    display: flex;
+}
+.input-area{
+    flex-direction: column;
+}
+.left-body , .right-body{
+    width: 100%;
+}
+}
