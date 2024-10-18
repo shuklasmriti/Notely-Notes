@@ -16,9 +16,10 @@
         type="text"
         placeholder="Add your notes here"
         [(ngModel)]="userInput"
+        (keyup.enter)="submit()"
       />
       <div class="input-button-box">
-      <button (click)="submit()">Submit</button>
+      <button (click)="submit()" >Submit</button>
       <button (click)="removeInput()">Remove</button>
     </div>
 </div>
